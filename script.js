@@ -10,11 +10,8 @@ $(function() {
 
 $("#nivel, #fechamento").on("change keyup paste", function() {
     var valor = $("#fechamento").val()
-    console.log(valor)
     var ve = $("#nivel").val()
-    console.log(ve)
     var bool = valor != "" && ve != ""
-    console.log(bool)
     if (bool) {
         var res = ve * window.dp
         var max = valor * (1 + res)
@@ -27,3 +24,10 @@ $("#nivel, #fechamento").on("change keyup paste", function() {
         $("#min").html(Math.round(min * 10) / 10)
     }
 })
+
+function limpar() {
+    $.removeCookie("valor")
+    $.removeCookie("ve")
+    $.removeCookie("max")
+    $.removeCookie("min")
+}
