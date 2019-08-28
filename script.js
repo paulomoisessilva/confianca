@@ -30,4 +30,5 @@ function limpar() {
     $.removeCookie("ve")
     $.removeCookie("max")
     $.removeCookie("min")
+    window.location.reload
 }
