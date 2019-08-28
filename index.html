@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+    <script>
+        $(function() {
+            var url = window.location.href
+            var htt = url.split(":")
+            var ht0 = (htt[1]).split(".")
+            if (htt[0] == "http" && ht0[0] == "//plataforma") {
+                var u0 = url.replace("http", "https")
+                window.location.href = u0
+            }
+        })
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
